@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Birthday App</title>
+
+    <!-- bootstrap css for styling  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        div.month {
+          width: 250px;
+          margin: 3px;
+        }
+
+        button.month-sort-btn {
+          margin:20px;
+        }
+    </style>
+
+  </head>
+  <body>
+
+    <!-- Buttons for sorting months -->
+    <button type="button"
+            id="alphabetize"
+            class="btn btn-default month-sort-btn">Alphabetize</button>
+
+    <button type="button"
+            id="numerical"
+            class="btn btn-default"month-sort-btn>Numerical</button>
+    <br />
+
+    <!-- containing element that will house the month buttons -->
+    <div class="month-list" id="monthList"></div>
+
+    <!-- vendor / open source scripts. TODO: Use requireJS to dynamically load scripts and manage dependency injection -->
+    <script src="lib/jquery-2.1.0.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/backbone.min.js"></script>
+
+    <!-- custom scripts TODO: Use requireJS to dynamically load scripts and manage dependency injection -->
+    <script src="js/assets/BirthdayMonth.js" type="text/javascript"></script>
+    <script src="js/views/AppView.js" type="text/javascript"></script>
+    <script src="js/views/MonthView.js" type="text/javascript"></script>
+    <script src="js/models/MonthModel.js" type="text/javascript"></script>
+    <script src="js/collections/YearCollection.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+
+  </body>
+</html>
